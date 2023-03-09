@@ -6,12 +6,12 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  //
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Tugas',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Tugas & Latihan BAB 2'),
     );
   }
 }
@@ -48,7 +48,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
+  int _counter = 0;
+  int _bil = 0;
   String _text = "Ganjil";
 
   void _incrementCounter() {
@@ -59,22 +60,31 @@ class _MyHomePageState extends State<MyHomePage> {
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
       _counter++;
-      if(_counter>10){
-        _counter = 0;
+      if(_counter > 30){
+        _counter = 1;
       }
 
-      _text = "Ganjil: ";
-      for(int i = 0; i <= _counter; i++){
-        if(i % 2 != 0){
-          _text += '${i}, ';
+      _text = "Genap : ";
+      for(int i = 1; i <= _counter; i++){
+        if(i % 3 == 0) {
+          if (i % 2 == 0) {
+            _text += '${i}, ';
+          }
         }
       }
 
-      // if(_counter % 2 == 0){
-      //   _text = "Genap";
-      // }else{
-      //   _text = "Ganjil";
-      // }
+      /*_text = "Prima : ";
+      for (int i = 1; i <= _counter; i++){
+        _bil = 0;
+        for (int j = 1; j <= i; j++){
+          if (i % j == 0){
+            _bil++;
+          }
+        }
+        if (_bil==2){
+          _text += '${i}, ';
+        }
+      }*/
     });
   }
 
@@ -120,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.headline4,
             ),
             Text(
-              _text,
+              '$_text',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],

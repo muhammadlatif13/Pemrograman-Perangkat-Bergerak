@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -63,6 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         _counter = 0;
       }
 
+      // Percobaan 3
       _text = "Ganjil: ";
       for(int i = 0; i <= _counter; i++){
         if(i % 2 != 0){
@@ -70,11 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       }
 
-      // if(_counter % 2 == 0){
-      //   _text = "Genap";
-      // }else{
-      //   _text = "Ganjil";
-      // }
+      // Percobaan 2
+      if(_counter % 2 == 0){
+        _text = "Genap";
+      }else{
+        _text = "Ganjil";
+      }
     });
   }
 
