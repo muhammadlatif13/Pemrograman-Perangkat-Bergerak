@@ -73,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       }
 
-      /*_text = "Prima : ";
+      _text = "Prima : ";
       for (int i = 1; i <= _counter; i++){
         _bil = 0;
         for (int j = 1; j <= i; j++){
@@ -84,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
         if (_bil==2){
           _text += '${i}, ';
         }
-      }*/
+      }
     });
   }
 

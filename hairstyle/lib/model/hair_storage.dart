@@ -1,7 +1,8 @@
 class HairStorage {
   String nama;
   String banner;
-  String tipeRambut;
+  String jalan;
+  String lokasi;
   String modelRambut1;
   String modelRambut2;
   String modelRambut3;
@@ -10,7 +11,8 @@ class HairStorage {
   HairStorage({
     required this.nama,
     required this.banner,
-    required this.tipeRambut,
+    required this.jalan,
+    required this.lokasi,
     required this.modelRambut1,
     required this.modelRambut2,
     required this.modelRambut3,
